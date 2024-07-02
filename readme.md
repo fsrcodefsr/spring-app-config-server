@@ -1,4 +1,4 @@
 # Spring App Config Server
 tutorial: https://gitlab.com/spring-apps-infra/spring-app-config-server
 
-local impl. pulling configs from gitlab
+dockerized spring cloud config service which imports config files from repository from gitlab

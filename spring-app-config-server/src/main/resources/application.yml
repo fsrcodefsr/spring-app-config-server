@@ -8,8 +8,8 @@ spring:
     config:
       server:
         git:
-          uri: http://localhost:880/fsrcodefsr/config-repo.git
+          uri: http://gitlab/fsrcodefsr/config-repo.git
           username: fsrcodefsr
-          password: password # Replace with your actual GitLab password
+          password: qwER12#$qaWS # Replace with your actual GitLab password
 
 

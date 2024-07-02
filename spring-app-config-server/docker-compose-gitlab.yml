@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab
+    restart: always
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.local'
+        gitlab_rails['lfs_enabled'] = true
+    ports:
+      - "880:80"
+      - "8443:443"
+      - "822:22"
+    volumes:
+      - ./gitlab/config:/etc/gitlab:rw
+      - ./gitlab/logs:/var/log/gitlab:rw
+      - ./gitlab/data:/var/opt/gitlab:rw
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    external: true
+

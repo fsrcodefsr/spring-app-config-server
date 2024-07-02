@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  config_srv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: config-service:1.0.0
+    container_name: config-service-container
+    ports:
+      - "8888:8888"
+    environment:
+      - JAVA_OPTS=-Xms64m -Xmx256m
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    external: true
