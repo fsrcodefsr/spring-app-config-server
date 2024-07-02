@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: spring-app-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://localhost:880/fsrcodefsr/config-repo.git
+          username: fsrcodefsr
+          password: qwER12#$qaWS  # Replace with your actual GitLab password
+          clone-on-start: true  # Optional, if you want to clone the repo on startup
+        # native:
+        #   searchLocations: file://${HOME}/config-repo
+
