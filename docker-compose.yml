@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: config-service:1.0.0
-    container_name: config-service-container
+    container_name: config-service
     ports:
       - "8888:8888"
     environment:
