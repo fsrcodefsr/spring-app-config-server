@@ -5,14 +5,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: config-service:1.0.0
+    image: config-service:1.0
     container_name: config-service
     ports:
       - "8888:8888"
     environment:
       - JAVA_OPTS=-Xms64m -Xmx256m
     networks:
-      - my-network
+      my-network:
+        aliases:
+          - nexus-local
+
 
 networks:
   my-network:
